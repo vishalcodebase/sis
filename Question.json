@@ -1,0 +1,15 @@
+[
+    {   "Topic":"Testing A",
+        "Difficulty":"Easy",
+        "Question":"1. You're defining a custom type. Why would you use a struct instead of a class?  Enter the three best answers below.",
+        "AnswerType":"MCQ","NumOption":"5","NumCorrect":"1",
+        "Options":{"1":"Because the type is very large (it has many fields) and you expect to have many instances",
+                    "2":"Because the type needs to support multiple interfaces. ",
+                    "3":"Because the type is very small and you expect to have many instances. ",
+                    "4":"Because the type will never have a derived classes.",
+                    "5":"Because the type needs to support events. "},
+        "CorrectOpt":"B"
+    },
+    {"Topic":"Testing A","Difficulty":"Easy","Question":"2. You're defining a custom type. Why would you use a struct instead of a class?  Enter the three best answers below.","AnswerType":"MCQ","NumOption":"5","NumCorrect":"1","Options":{"1":"Because the type is very large (it has many fields) and you expect to have many instances","2":"Because the type needs to support multiple interfaces. ","3":"Because the type is very small and you expect to have many instances. ","4":"Because the type will never have a derived classes.","5":"Because the type needs to support events. "},"CorrectOpt":"B"},
+    {"Topic":"Testing A","Difficulty":"Easy","Question":"3. You're defining a custom type. Why would you use a struct instead of a class?  Enter the three best answers below.","AnswerType":"MCQ","NumOption":"5","NumCorrect":"1","Options":{"1":"Because the type is very large (it has many fields) and you expect to have many instances","2":"Because the type needs to support multiple interfaces. ","3":"Because the type is very small and you expect to have many instances. ","4":"Because the type will never have a derived classes.","5":"Because the type needs to support events. "},"CorrectOpt":"B"}
+]

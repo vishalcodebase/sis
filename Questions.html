@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Question</title>
+    
+    
+  </head>
+  <body class="mybody">
+    <div class="mynav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">SIS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About us</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="mcq.html">Take MCQ</a>
+                </li>
+                <li float:"right" class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Questions.html">Questions</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </div >
+    
+    <div id="QuestionForm" class="mybutton" >
+        <form onsubmit="" name="QForm" >
+        <fieldset>  
+          <legend class="text-center"><b>QUESTION</b> </legend>  
+          <hr>     
+          <div class="form-horizontal">
+                        <label class="text-center" >Topic</label>
+                        <input type="text" class="form-control" id="QTopic"  placeholder="Topic" required>              
+                      </div>
+                  <br>
+                      <div class="form-group">
+                    
+                      <label for="Level" >Difficulty</label>
+                    
+                      <div class="btn-sm btn-group-toggle" id="Level" data-toggle="buttons">
+                        <label class="btn btn-secondary active btn-sm">
+                        <input type="radio"  name="QDifficultyLevel" value="Easy" placeholder="ID" checked> Easy
+                        </label>
+                        <label class="btn btn-secondary btn-sm">
+                        <input type="radio"  name="QDifficultyLevel" value="Difficult" placeholder="ID" > Difficult
+                        </label>
+                        <label class="btn btn-secondary btn-sm">
+                        <input type="radio"  name="QDifficultyLevel" value="VeryDifficult" placeholder="ID" > Very Difficult
+                        </label>
+                      </div>
+                      
+                  </div>
+                      <div class="form-group">
+                            <label class="text-center">Enter The Question</label> <br>
+                            <textarea name="Enter the Question" class="form-control" id="QText" cols="75" rows="3" placeholder="Enter the Question" required></textarea>
+                        </div>
+                      
+         </fieldset> 
+                        <!-- Table for AnswerType -->
+          <fieldset>  
+              <legend class="text-center"><b>OPTIONS</b> </legend> 
+              <hr>
+                        <div>  
+                      <div class="row">  <!-- Row 1 Answertype -->
+                        <div class="col-sm-1"><label class="text-center ">Type</label> </div>
+                        <div class="btn-sm col-sm-3" data-toggle="buttons" >
+                                <label class="btn btn-secondary btn-sm">
+                                <input type="radio"  name="AnswerType" value="MCQ" checked> MCQ
+                                </label>
+                                <label class="btn btn-secondary btn-sm">
+                                <input type="radio"  name="AnswerType" value="MCA"> MCA
+                                </label>
+                        </div>
+                        <div class="col-sm-2" >
+                          
+                              <label class="text-center"  >Num of Opt</label>
+  
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="number" class="form-control" id="NumOption" min="2" max="5" placeholder="2-5" required>
+                        </div>
+                        <div  class="col-sm-2">
+                          
+                            <label class="text-center" >NumCorrect</label>
+
+                        </div>
+                      <div class="col-sm-2">
+                          <input type="number" class="form-control" id="NumCorrect" min="1" max="5" placeholder="2-5" value=1 required>
+                      </div>
+                      </div>
+                      <br>  
+                      <div class="container">
+                          
+                          <div class="table-responsive">          
+                          <table class="table collapse" id="OptionTable">
+                            <col width="3%">
+                            <col width="70%">
+                            <col width="10%">
+                            <col width="10%">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th class="text-center">Text</th>
+                                <th>Tick</th>
+                                <th>Marks</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr id="OptionRow1" style="visibility: hidden">
+                                <td>1</td>
+                                <td><input type="text" class="form-control" id="OptionText1" ></td>
+                                <td><input type="checkbox" name="CheckRight" id="MCA1" style="visibility: hidden" value="A">
+                                  <input type="radio" name="RadioRight" id="MCQ1" style="visibility: hidden" value="A">
+                                </td>
+                                <td></td>
+                                
+                              </tr>
+                              <tr id="OptionRow2" style="visibility: hidden">
+                                  <td>2</td>
+                                  <td><input type="text" class="form-control" id="OptionText2" ></td>
+                                  <td><input type="checkbox" name="CheckRight" id="MCA2" style="visibility: hidden" value="B">
+                                    <input type="radio" name="RadioRight" id="MCQ2" style="visibility: hidden" value="B">
+                                  </td>
+                                  <td></td>
+                                  
+                                </tr>
+                                <tr id="OptionRow3" style="visibility: hidden">
+                                    <td>3</td>
+                                    <td><input type="text" class="form-control" id="OptionText3" ></td>
+                                    <td><input type="checkbox" name="CheckRight" id="MCA3" style="visibility: hidden" value="C" >
+                                      <input type="radio" name="RadioRight" id="MCQ3" style="visibility: hidden" value="C">
+                                    </td>
+                                    <td></td>
+                                    
+                                  </tr>
+                                  <tr id="OptionRow4" style="visibility: hidden">
+                                      <td>4</td>
+                                      <td><input type="text" class="form-control" id="OptionText4" ></td>
+                                      <td><input type="checkbox" name="CheckRight" id="MCA4" style="visibility: hidden" value="D" >
+                                        <input type="radio" name="RadioRight" id="MCQ4" style="visibility: hidden" value="D">
+                                      </td>
+                                      <td></td>
+                                      
+                                    </tr>
+                                    <tr id="OptionRow5" style="visibility: hidden" >
+                                        <td>5</td>
+                                        <td><input type="text" class="form-control" id="OptionText5" ></td>
+                                        <td><input type="checkbox" name="CheckRight" id="MCA5" style="visibility: hidden" value="E">
+                                          <input type="radio" name="RadioRight" id="MCQ5" style="visibility: hidden" value="E">
+                                        </td>
+                                        <td></td>
+                                        
+                                      </tr>
+                            </tbody>
+                          </table>
+                          </div>
+                        </div>
+
+                      
+          </fieldset>
+                    
+
+                        <div class=" text-center btn-group-toggle"> 
+                          <input type="button" class="btn btn-secondary" value="Next Question" onclick="GetQuestion()" >
+                          <input type="button" class=" btn btn-secondary" value="Submit" onclick="QuestionSubmit()">
+                        </div>
+
+                 </form>
+
+                
+    </div>
+
+    </body>  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js">
+    </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+ 
+  
+  <script src="TakeQuestions.js"></script>
+</html>
