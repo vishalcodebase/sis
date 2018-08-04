@@ -286,6 +286,7 @@ function checkSecond(sec)
   if (sec < 0) {sec = "59"};
   return sec;
 }
+//checking GIT
 
 
 
